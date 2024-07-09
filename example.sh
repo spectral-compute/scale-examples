@@ -16,13 +16,9 @@ case "${EXAMPLE}" in
 
         cmake \
             -DCUDAToolkit_ROOT="${SCALE_DIR}" \
-            -DCMAKE_C_COMPILER="${SCALE_DIR}/bin/gcc" \
-            -DCMAKE_CXX_COMPILER="${SCALE_DIR}/bin/g++" \
             -DCMAKE_CUDA_COMPILER="${SCALE_DIR}/bin/nvcc" \
-            -DCMAKE_CUDA_HOST_COMPILER="${SCALE_DIR}/bin/g++" \
             -DCMAKE_CUDA_ARCHITECTURES="86" \
             -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-            -G "Unix Makefiles" \
             -B "src/${EXAMPLE}/build" \
             "src/${EXAMPLE}"
 
